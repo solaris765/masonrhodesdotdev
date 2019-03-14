@@ -1,0 +1,5 @@
+**/node_modules/**/*
+**/public/
+**/dist/
+**/dash_server/3T/
+MongoSetup.txt
