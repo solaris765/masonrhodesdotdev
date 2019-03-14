@@ -35,6 +35,17 @@ export default {
     return {
       isDark: false
     };
+  },
+  mounted() {
+    let dark = localStorage.getItem('dark')
+    if (dark) this.isDark = JSON.parse(dark)
+  },
+  watch: {
+    isDark: {
+      handler() {
+        localStorage.setItem('dark', JSON.stringify(this.isDark))
+      }
+    }
   }
 };
 </script>
