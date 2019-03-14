@@ -1,14 +1,14 @@
 <template>
-  <v-layout>
-    <v-container justify-center>
-      <v-flex md6 justify-center>
+  <v-container grid-list-md text-xs>
+    <v-layout row wrap>
+      <v-flex xs12 sm12 md6 lg6 xl6 justify>
         <div :key="gotit" v-html="text"/>
       </v-flex>
-      <v-flex>
-        <img src="../assets/cooper.jpg" class="cooper">
+      <v-flex xs12 sm12 md6 lg6 xl6 justify-start>
+        <v-img :src="cooper" aspect-ratio="1.77" contain max-height="200"/>
       </v-flex>
-    </v-container>
-  </v-layout>
+    </v-layout>
+  </v-container>
 </template>
 <style>
 .cooper {
@@ -22,6 +22,7 @@ import marked from "marked";
 
 export default {
   data: () => ({
+    cooper: require("@/assets/cooper.jpg"),
     marked: null,
     gotit: ""
   }),
@@ -44,7 +45,7 @@ export default {
 ## About me:
 I am a dog person. 
 
-${(this.gotit) || ""}
+${this.gotit || ""}
 
 ## Experience:
    - NodeJS Fullstack
@@ -69,13 +70,13 @@ ${(this.gotit) || ""}
    - Go
    - Kotlin
    - Racket
-    `
+    `;
       return marked(html);
     }
   },
   methods: {
     async lorem() {
-      console.log("started ipsum")
+      console.log("started ipsum");
       let l = (await axios.get(
         "https://baconipsum.com/api/?type=all-meat&paras=2&start-with-lorem=1"
       )).data;
@@ -86,7 +87,7 @@ ${(this.gotit) || ""}
       });
 
       this.gotit = text;
-      console.log(this.gotit)
+      console.log(this.gotit);
     }
   }
 };
