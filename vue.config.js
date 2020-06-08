@@ -1,7 +1,7 @@
 const fs = require(`fs`)
 
 module.exports = {
-    outputDir: `../dist`,
+    outputDir: `./dist`,
     devServer: {
         https: {
             key: fs.readFileSync(`./cert/localhost.key`),
