@@ -34,10 +34,9 @@ export default {
     computed: {
         text: function() {
             let html = `
-## About me:
-I am a dog person. 
-
-${this.gotit || ``}
+## Links:
+[Github](https://github.com/solaris765)
+[Linkdin](https://www.linkedin.com/in/mason-rhodes/)
 
 ## Experience:
    - NodeJS Fullstack
@@ -77,23 +76,23 @@ ${this.gotit || ``}
             smartLists: true,
             smartypants: false
         })
-        this.lorem()
+        // this.lorem()
     },
     methods: {
-        async lorem() {
-            console.log(`started ipsum`)
-            let l = (await axios.get(
-                `https://baconipsum.com/api/?type=all-meat&paras=2&start-with-lorem=1`
-            )).data
-            let text = ``
+        // async lorem() {
+        //     console.log(`started ipsum`)
+        //     let l = (await axios.get(
+        //         `https://baconipsum.com/api/?type=all-meat&paras=2&start-with-lorem=1`
+        //     )).data
+        //     let text = ``
 
-            l.forEach(par => {
-                text += par + `\n\n`
-            })
+        //     l.forEach(par => {
+        //         text += par + `\n\n`
+        //     })
 
-            this.gotit = text
-            console.log(this.gotit)
-        }
+        //     this.gotit = text
+        //     console.log(this.gotit)
+        // }
     }
 }
 </script>
