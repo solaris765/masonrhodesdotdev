@@ -40,7 +40,7 @@ export default {
 ## Links:
 [Github](https://github.com/solaris765)
 [Linkdin](https://www.linkedin.com/in/mason-rhodes/)
-[Resume](https://drive.google.com/file/d/1yOIXzDjlOci6Fo93DESvSkyPXDhaYqfk/view?usp=sharing)
+[Resume](https://drive.google.com/file/d/1ktewYfQZnZInVS0k3TYxJ_LGACgIkXCd/view?usp=sharing)
 
 This is here so I can mess around with vue and AWS hosting
 Maybe I'll put more here in the future I dunno ¯\\\\_(ツ)_/¯
