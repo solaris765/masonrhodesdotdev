@@ -2,6 +2,7 @@
     <v-container grid-list-md text-xs>
         <v-layout row wrap>
             <v-flex xs12 sm12 md6 lg6 xl6 justify>
+                <span class="name">Mason Rhodes</span>
                 <div :key="gotit" v-html="text" />
             </v-flex>
             <v-flex xs12 sm12 md6 lg6 xl6 justify-start>
@@ -16,13 +17,15 @@
     </v-container>
 </template>
 <style>
+.name {
+    font-size: 25pt;
+}
 .cooper {
     height: 200px;
 }
 </style>
 
 <script>
-import axios from 'axios'
 import marked from 'marked'
 
 export default {
@@ -37,30 +40,10 @@ export default {
 ## Links:
 [Github](https://github.com/solaris765)
 [Linkdin](https://www.linkedin.com/in/mason-rhodes/)
+[Resume](https://drive.google.com/file/d/1yOIXzDjlOci6Fo93DESvSkyPXDhaYqfk/view?usp=sharing)
 
-## Experience:
-   - NodeJS Fullstack
-   - DotNet Core Fullstack
-   - Primary UI focus is vue w/ vuetify
-   - MongoDB
-   - Docker, Kubernetes w/ Istio for microservice network management
-   - Google cloud suite (GCE, GAE, GKE + supporting tech)
-   - Exchange / AD server administration
-   - Nginx web server administration
-
-## Primary Languages:
-   - javascript
-   - C#
-
-### With exposer / some experience in
-   - C++
-   - vbs
-   - Powershell
-   - Java
-   - Python
-   - Go
-   - Kotlin
-   - Racket
+This is here so I can mess around with vue and AWS hosting
+Maybe I'll put more here in the future I dunno ¯\\\\_(ツ)_/¯
     `
             return marked(html)
         }
@@ -85,11 +68,9 @@ export default {
         //         `https://baconipsum.com/api/?type=all-meat&paras=2&start-with-lorem=1`
         //     )).data
         //     let text = ``
-
         //     l.forEach(par => {
         //         text += par + `\n\n`
         //     })
-
         //     this.gotit = text
         //     console.log(this.gotit)
         // }

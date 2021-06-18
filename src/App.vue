@@ -2,7 +2,13 @@
     <v-app :dark="isDark">
         <v-toolbar app>
             <v-toolbar-title class="headline text-uppercase">
-                <span>Mason Rhodes</span>
+                <v-img
+                    :class="isDark ? 'logo' : ''"
+                    :src="logo"
+                    contain
+                    width="50"
+                    :fill="'#000'"
+                />
             </v-toolbar-title>
             <v-spacer></v-spacer>
             <v-flex shrink>
@@ -24,6 +30,9 @@
 .buffer {
     padding-top: 20px;
 }
+.logo {
+    filter: brightness(0) invert(1);
+}
 </style>
 
 <script>
@@ -36,6 +45,7 @@ export default {
     },
     data() {
         return {
+            logo: require(`@/assets/logo.svg`),
             isDark: false
         }
     },
